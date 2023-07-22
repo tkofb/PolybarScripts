@@ -1,2 +1,2 @@
-# PolybarScripts
-All of the polybar scripts ran at launch
+# Weather Script
+This weather script shows the weather given a locations longitudinal and latitudinal position
