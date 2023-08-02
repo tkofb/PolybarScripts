@@ -17,8 +17,8 @@ request = requests.get(url="http://api.weatherstack.com/current", params = param
 try: 
     if request.status_code == 200:
         currentTemp = request.json()['current']["temperature"]
-        currentTemp = celsiusToFahrenheit(currentTemp)
-        returnString = f"{currentTemp} °F"
+        currentTemp = int(celsiusToFahrenheit(currentTemp))
+        returnString = f"{currentTemp}°F"
         print(returnString)
        
 except:
