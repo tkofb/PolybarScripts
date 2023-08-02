@@ -1,27 +1,25 @@
 import requests
 
+# def celsiusToFahrenheit(num):
+#     convertedNum = (num*1.8) + 32
+#     return convertedNum
 
 params = { 
-    'access_key': '3735019f0d3687983087e3b0c04e9d38',
-    'query': 'Salisbury, Maryland'
+    'zip': '21801',
+    'appid': '68454091de219371a75b27123462f4d0',
+    'units': 'imperial'
 }
 
-
-def celsiusToFahrenheit(num):
-    convertedNum = (num*1.8) + 32
-    return convertedNum
-
-request = requests.get(url="http://api.weatherstack.com/current", params = params)
-
+request = requests.get(url="https://api.openweathermap.org/data/2.5/weather", params = params)
 
 try: 
     if request.status_code == 200:
-        currentTemp = request.json()['current']["temperature"]
-        currentTemp = int(celsiusToFahrenheit(currentTemp))
+        currentTemp = int(request.json()['main']["feels_like"])
         returnString = f"{currentTemp}°F"
         print(returnString)
        
 except:
+   
     print("0")
     
 
