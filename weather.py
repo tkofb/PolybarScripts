@@ -1,8 +1,13 @@
 import requests
+from time import sleep
 
-# def celsiusToFahrenheit(num):
-#     convertedNum = (num*1.8) + 32
-#     return convertedNum
+def celsiusToFahrenheit(num):
+    convertedNum = (num*1.8) + 32
+    return convertedNum
+
+# Used sleep function to override personal issue
+sleep(1)
+
 
 params = { 
     'zip': '21801',
@@ -17,9 +22,7 @@ try:
         currentTemp = int(request.json()['main']["feels_like"])
         returnString = f"{currentTemp}°F"
         print(returnString)
-       
 except:
-   
     print("0")
     
 
