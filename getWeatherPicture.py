@@ -7,7 +7,12 @@ params = {
     'units': 'imperial'
 }
 
-request = requests.get(url="https://api.openweathermap.org/data/2.5/weather", params = params)
+symbol = "" #Cloud
+
+try:
+    request = requests.get(url="https://api.openweathermap.org/data/2.5/weather", params = params)
+except:
+     print("",end="")
 
 symbol = "" #Cloud
 
@@ -32,6 +37,5 @@ try:
             symbol = '' #Sun
             
         print(symbol)
-         
 except:
     print(symbol)
