@@ -1,2 +1,2 @@
 # Weather API
-This weather script shows the weather given a locations longitudinal and latitudinal position
+This project is a Weather API designed to retrieve the current temperature of a location based on its longitude and latitude coordinates, a feature personally integrated into my Polybar configuration project.
